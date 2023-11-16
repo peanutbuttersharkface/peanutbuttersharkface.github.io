@@ -12,7 +12,7 @@ async function getPokemon(url) {
 function doStuff(data) {
   const results = data.results;
   const selectElement = document.createElement('select');
-  document.body.appendChild(selectElement); // Move this line inside the doStuff function
+  document.body.appendChild(selectElement); 
 
 
   results.forEach((pokemon) => {
