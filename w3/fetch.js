@@ -12,6 +12,8 @@ async function getPokemon(url) {
 function doStuff(data) {
   const results = data.results;
   const selectElement = document.createElement('select');
+  document.body.appendChild(selectElement); // Move this line inside the doStuff function
+
 
   results.forEach((pokemon) => {
     const option = document.createElement('option');
@@ -20,7 +22,6 @@ function doStuff(data) {
     selectElement.appendChild(option);
   });
 
-  document.body.appendChild(selectElement); // Move this line inside the doStuff function
 }
 
 getPokemon(url);
