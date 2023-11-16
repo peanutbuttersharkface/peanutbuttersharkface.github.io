@@ -5,6 +5,7 @@ async function getPokemon(url) {
     const response = await fetch(url);
     if (response.ok) {
       const data = await response.json();
+      console.log("Fetched data:", data); // Log fetched data for inspection
       doStuff(data);
     } else {
       throw new Error('Network response was not ok.');
@@ -37,4 +38,5 @@ function doStuff(data) {
 }
 
 getPokemon(url);
+
 
