@@ -1,26 +1,24 @@
 const url = "https://pokeapi.co/api/v2/pokemon/ditto";
-//let results = null;
 
 async function getPokemon(url) {
-    try{
-      const response = await fetch(url);
-      if (response.ok) {
-        const data = await response.json();
-        doStuff(data);
-      }else {
-        throw new Error('response not ok');
-      }
-    } catch (error) {
-        console.error('error getting data:', error);
+  try {
+    const response = await fetch(url);
+    if (response.ok) {
+      const data = await response.json();
+      doStuff(data);
+    } else {
+      throw new Error('Network response was not ok.');
     }
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
 }
 
 function doStuff(data) {
-    try{
-     const results = data.results;
-     if(results && Array.isArray(results)){
+  try {
+    const results = data.results || [];
+    if (Array.isArray(results) && results.length > 0) {
       const selectElement = document.createElement('select');
-
 
       results.forEach((pokemon) => {
         const option = document.createElement('option');
@@ -39,3 +37,4 @@ function doStuff(data) {
 }
 
 getPokemon(url);
+
