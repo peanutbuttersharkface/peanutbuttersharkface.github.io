@@ -11,14 +11,14 @@ async function getPokemon(url) {
   }
 }
 function doStuff(data) {
-  results = data;
-  console.log("first: ", results);
-  results.results.forEach((pokemon) => {
-    const div = document.createElement('div');
-    div.textContent = pokemon.name;
-    document.querySelector('main').appendChild(div);
-      // assumes you have a <main> element in your HTML document
+ const results = data.results;
+ const selectElement = document.createElement('select');
+ results.forEach((pokemon) => {
+    const option = document.createElement('option');
+    option.value = pokemon.name;
+    option.textContent = pokemon.name;
+    selectElement.appendChild(option);
+    
   });
 }
-getPokemon(url);
-console.log("second: ", results);
+document.body.appendChild(selectElement);
