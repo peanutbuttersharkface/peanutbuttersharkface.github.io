@@ -5,16 +5,32 @@
   </form>
   
   <script>
-    formElem.onsubmit = async (e) => {
-      e.preventDefault();
-  
+    document.addEventListener('DOMContentLoaded', () => {
+  const formElem = document.getElementById('formElem');
+
+  formElem.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const formData = new FormData(formElem);
+    formData.append('submitted', new Date());
+
+    for (let key of formData.keys()) {
+      console.log(key, formData.get(key));
+    }
+
+    try {
       let response = await fetch('/article/formdata/post/user', {
         method: 'POST',
-        body: new FormData(formElem)
+        body: formData
       });
-  
+
       let result = await response.json();
-  
+
       alert(result.message);
-    };
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  });
+});
+
+  
   </script>
