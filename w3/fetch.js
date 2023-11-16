@@ -13,6 +13,12 @@ async function getPokemon(url) {
 function doStuff(data) {
   results = data;
   console.log("first: ", results);
+  results.results.forEach((pokemon) => {
+    const div = document.createElement('div');
+    div.textContent = pokemon.name;
+    document.querySelector('main').appendChild(div);
+      // assumes you have a <main> element in your HTML document
+  });
 }
 getPokemon(url);
 console.log("second: ", results);
