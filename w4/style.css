@@ -16,7 +16,7 @@ body {
     color: white;
   }
   
-  @keyframes mayanima{
+  @keyframes myanima{
     0% {
         transform: translateY(0);
         background-color: #abe;
