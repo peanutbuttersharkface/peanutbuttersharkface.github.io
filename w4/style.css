@@ -25,12 +25,12 @@ body {
       background-color: rgb(226, 219, 24);
     }
     50% {
-      transform: translateX(50px) translateY(-50px);
+      transform: translateX(100px) translateY(-100px);
       background-color: rgb(125, 34, 170);
       color: #fff;
     }
     100% {
-      transform: translateX(-50px) translateY(-50px);
+      transform: translateX(-100px) translateY(-100px);
       background-color: rgb(85, 221, 112);
     }
   }
