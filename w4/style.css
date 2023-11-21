@@ -8,8 +8,8 @@ body {
   }
   .box {
     background-color: cornflowerblue;
-    width: 100px;
-    height: 100px;
+    width: 500px;
+    height: 500px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
     color: white;
