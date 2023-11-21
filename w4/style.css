@@ -19,29 +19,27 @@ body {
     justify-content: center;
   }
   
-  /* Pseudo-elements to create color overlays */
-  .box::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(226, 219, 24);
-    animation: colorOverlay 6s infinite alternate;
-    z-index: -1;
-  }
-  
+  .box::before,
   .box::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    z-index: -1;
+  }
+  
+  .box::before {
+    top: 0;
+    left: 0;
+    background-color: rgb(226, 219, 24);
+    animation: colorOverlay 6s infinite alternate;
+  }
+  
+  .box::after {
+    top: -100%;
+    left: -100%;
     background-color: transparent;
     animation: colorOverlay2 6s infinite alternate;
-    z-index: -1;
   }
   
   @keyframes colorOverlay {
@@ -65,5 +63,4 @@ body {
       opacity: 1;
     }
   }
-  
   
