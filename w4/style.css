@@ -6,31 +6,32 @@ body {
     margin: 0;
     
   }
-  .box{
-    display: flex;
+  .box {
     background-color: cornflowerblue;
     width: 100px;
     height: 100px;
-    animation: myanima 3s infinite alternate;
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
     color: white;
+    display: flex;
     align-items: center;
     justify-content: center;
+    animation: myanima 3s infinite alternate;
   }
   
-  @keyframes myanima{
+  @keyframes myanima {
     0% {
-        transform: translateY(0);
-        background-color: #abe;
-      }
-      50% {
-        transform: translateX(200px) translateY(-100px);
-        background-color: #24A;
-        color: #fff;
-      }
-      100% {
-        transform: translateX(-100px) translateY(-100px);
-        background-color: #57D;
-      }
+      transform: translateY(0);
+      background-color: #abe;
     }
+    50% {
+      transform: translateX(200px) translateY(-100px);
+      background-color: #24a;
+      color: #fff;
+    }
+    100% {
+      transform: translateX(-100px) translateY(-100px);
+      background-color: #57d;
+    }
+  }
+  
