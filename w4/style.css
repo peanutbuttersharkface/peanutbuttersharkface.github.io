@@ -16,7 +16,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: myanima 3s infinite alternate;
+    animation: myanima 6s infinite alternate;
   }
   
   @keyframes myanima {
@@ -25,12 +25,12 @@ body {
       background-color: #abe;
     }
     50% {
-      transform: translateX(200px) translateY(-100px);
+      transform: translateX(50px) translateY(-50px);
       background-color: #24a;
       color: #fff;
     }
     100% {
-      transform: translateX(-100px) translateY(-100px);
+      transform: translateX(-50px) translateY(-50px);
       background-color: #57d;
     }
   }
