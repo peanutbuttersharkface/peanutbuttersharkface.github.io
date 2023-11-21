@@ -15,6 +15,7 @@ body {
     font-size: 15px;
     color: white;
   }
+  
   @keyframes mayanima{
     0% {
         transform: translateY(0);
