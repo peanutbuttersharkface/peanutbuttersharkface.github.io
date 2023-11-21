@@ -7,31 +7,63 @@ body {
     
   }
   .box {
-    background-color: cornflowerblue;
+    position: relative;
     width: 500px;
     height: 500px;
+    overflow: hidden;
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: myanima 6s infinite alternate;
   }
   
-  @keyframes myanima {
-    0% {
-      transform: translateY(0);
-      background-color: rgb(226, 219, 24);
+  /* Pseudo-elements to create color overlays */
+  .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(226, 219, 24);
+    animation: colorOverlay 6s infinite alternate;
+    z-index: -1;
+  }
+  
+  .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    animation: colorOverlay2 6s infinite alternate;
+    z-index: -1;
+  }
+  
+  @keyframes colorOverlay {
+    0%, 100% {
+      transform: translate(0, 0);
+      opacity: 0;
     }
     50% {
-      transform: translateX(100px) translateY(-100px);
-      background-color: rgb(125, 34, 170);
-      color: #fff;
-    }
-    100% {
-      transform: translateX(-100px) translateY(-100px);
-      background-color: rgb(85, 221, 112);
+      transform: translate(100px, -100px);
+      opacity: 1;
     }
   }
+  
+  @keyframes colorOverlay2 {
+    0%, 100% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      transform: translate(-100px, -100px);
+      opacity: 1;
+    }
+  }
+  
   
