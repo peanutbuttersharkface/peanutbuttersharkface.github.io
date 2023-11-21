@@ -4,16 +4,16 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
-    color: white;
+    
   }
   .box{
     background-color: cornflowerblue;
     width: 100px;
     height: 100px;
     animation: myanima 3s infinite alternate;
-
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color: white;
   }
   @keyframes mayanima{
     0% {
