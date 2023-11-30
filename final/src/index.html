@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bionic Reading API</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/main.js" type="module"></script>
+  </head>
+  <body>
+    <header class="header" id="header"></header>
+
+    <main>
+      <form id="readingForm">
+        <div class="container">
+          <h2>Submit Your Reading Choice</h2>
+        </div>
+
+        <div class="container" style="background-color: white">
+          <label for="URL">Input Your URL:</label>
+          <input
+            type="url"
+            id="inputURL"
+            placeholder="Enter URL"
+            class="rectangle_URL"
+            required
+          />
+         
+         
+          <label for="Fixation">Choose Your Fixation Number:</label>
+          <select name="Fixation" class="rectangle_Fix">
+            <option value="" disabled selected>#</option>    
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <div class="popup" id="popup">
+            <span class="popup_Fix">i</span> 
+            <span class="popupFixText" id="popupFixText">The fixation 
+              number sets the number of letters in a word that are bold,
+               1 is more letters or about 75% of the word shown in bold 
+               letters and 5 is less letters or about 25% of the word 
+               shown in bold letters.</span>
+          </div>
+
+          <label for="Saccade">Choose Your Saccade Number:</label>
+          <select name="Saccade" class="rectangle_Sac">
+            <option value="" disabled selected>#</option>    
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+          </select>
+          <div class="popup2" id="popup2">
+            <span class="popup_Sac">i</span> 
+            <span class="popupSacText" id="popupSacText">The Saccade, rapid movement
+               of your eyes from two different points, this sets the visual jumps 
+               from location to location by switching from different points of 
+               interest. The numbers represent how many words should have fixation 
+               points, 10 meaning every word, 20: every second word, 30: every third
+                word, 40: every fourth word , and 50: every fifth word.</span>
+          </div>
+          
+          </div>
+        </div>
+        <div class="container">
+          <button type="button" id="submitButton">Submit</button>
+        </div>
+        
+       <div class="rectangle_Text" id="responseContainer">
+       <div id="URLtext"></div>
+       </div>
+       
+      </form>
+    </main>
+    <footer class="footer" id="footer"></footer>
+
+  </body>
+</html>

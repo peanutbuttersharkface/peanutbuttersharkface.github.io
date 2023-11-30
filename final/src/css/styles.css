@@ -1,0 +1,130 @@
+:root{
+    --font-body: Roboto, sans-serif;
+    --font-headline: Bubblegum_Sans, sans-serif;
+    /* colors */
+    --primary-color: #103740;
+    --secondary-color: #F2D0A7;
+    --tertiary-color: #F20505;
+    --medium-yellow: #F29F05;
+    --dark-yellow: #f28705;
+
+    /* sizes */
+    --font-base: 18px;
+    --small-font: 0.8em;
+    --large-font: 1.2em;
+}
+
+body {
+ font-family: var(--font-body);
+ font-size: var(--font-base);
+ color: var(--primary-color);
+}
+Header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+button{
+    padding: .5em 2em;
+    background-color: var(--medium-yellow);
+    color: var(--tertiary-color);
+    margin: auto;
+    display:block;
+    border-radius: 20px;
+    border:0;
+    font-size: var(--font-base);
+    cursor: pointer;
+}
+.rectangle_URL{
+    height:20px;
+    width: 200px;
+    background-color: var(--secondary-color);
+}
+.rectangle_Fix{
+    height:20px;
+    width: 100px;
+    background-color: var(--secondary-color);
+}
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+  
+    
+}
+.popup2 {
+    position: relative;
+    display: inline-block;
+    
+}  
+.popup_Fix{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: #fff;
+    cursor: pointer;
+}
+.popup .popupFixText {
+    display: none;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: -30px;
+    left: 50%;
+    transform:translateX(-50%)
+}
+.popup_Sac{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: #fff;
+    cursor: pointer;
+}
+.popup2 .popupSacText {
+    display: none;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: -30px;
+    left: 50%;
+    transform:translateX(-50%)
+}  
+.popup .popupFixText.show {
+    display: block;
+}
+.popup2 .popupSacText.show2 {
+    display: block;
+} 
+
+.rectangle_Sac{
+    height:20px;
+    width: 100px;
+    background-color: var(--secondary-color);
+}
+
+.rectangle_Text{
+    height:300px;
+    width: 200px;
+    background-color: var(--secondary-color);
+}
+
+.footer{
+    font-weight: bold;
+}
