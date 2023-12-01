@@ -17,19 +17,36 @@
 body {
  font-family: var(--font-body);
  font-size: var(--font-base);
- color: var(--primary-color);
+ color: var(--tertiary-color);
+ background-color: var(--primary-color);
 }
 main{
     display:grid;
-    grid-template-rows: 10% 10% 10% 70%;
+    grid-template-rows: 1fr auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    
 }
 Header{
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
 }
+form{
+    grid-row: 1/2;
+    display:grid;
+    margin-bottom: 20px;
+    /* grid-template-rows: .25fr .25fr .25fr .25fr;  */
+    background-color: var(--primary-color);
+    
+}
+.formTitle{
+    color: white;
+    padding-left: 10px;
+}
 
 button{
+    grid-row:3/4;
     padding: .5em 2em;
     background-color: var(--medium-yellow);
     color: var(--tertiary-color);
@@ -42,28 +59,34 @@ button{
     
 }
 .rectangle_URL{
+    display: grid;
+    grid-row:2/3;
+    margin:2px;
+    margin-left: 10px;
     height:20px;
     width: 300px;
     background-color: var(--secondary-color);
 }
 .rectangle_Fix{
+    display: grid;
+    grid-row: 3/4;
+    margin:2px;
+    margin-left: 10px;
     height:20px;
     width: 100px;
     background-color: var(--secondary-color);
 }
-/* Popup container - can be anything you want */
+/* Popup container */
 .popup {
     position: relative;
-    display: inline-block;
-  
-    
+    display: inline-block;    
 }
 .popup2 {
     position: relative;
-    display: inline-block;
-    
+    display: inline-block;   
 }  
 .popup_Fix{
+    grid-row:2/3;
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -88,6 +111,7 @@ button{
     transform:translateX(-50%)
 }
 .popup_Sac{
+    grid-row: 3/4;
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -119,19 +143,29 @@ button{
 } 
 
 .rectangle_Sac{
+    display: grid;
+    grid-row: 3/4;
+    margin:2px;
+    margin-left: 10px;
     height:20px;
     width: 100px;
     background-color: var(--secondary-color);
 }
 
 .rectangle_Text{
-    height:90%;
+    grid-row: 2/3;
+    height:99%;
     width: 95%;
-    margin: auto;
-    padding: 2% 3%;
+    padding: 10px;
+    border-style: double;
+    border-width: 10px;
+    border-color: var(--tertiary-color);
     background-color: var(--secondary-color);
+    color:var(--primary-color);
+    
 }
 
 .footer{
     font-weight: bold;
+    padding-left: 10px;
 }

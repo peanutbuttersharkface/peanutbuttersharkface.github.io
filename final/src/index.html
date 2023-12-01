@@ -12,12 +12,12 @@
 
     <main>
       <form id="readingForm">
-        <div class="container">
+        <div class="formTitle">
           <h2>Let's Begin!</h2>
           <p>Enter the URL of the website that you want to speed read.</p>
         </div>
 
-        <div class="URL" style="background-color: white">
+        <div class="inputs" style="background-color: white">
           <label for="URL">URL:</label>
           <input
             type="url"
@@ -27,7 +27,14 @@
             required
           />
          
-         
+          <div class="popup" id="popup">
+            <span class="popup_Fix">i</span> 
+            <span class="popupFixText" id="popupFixText">The fixation 
+              number sets the number of letters in a word that are bold,
+               1 is more letters or about 75% of the word shown in bold 
+               letters and 5 is less letters or about 25% of the word 
+               shown in bold letters.</span>
+          </div>
           <label for="Fixation">Fixation #:</label>
           <select name="Fixation" class="rectangle_Fix">
             <option value="" disabled selected>Select</option>    
@@ -37,24 +44,7 @@
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
-          <div class="popup" id="popup">
-            <span class="popup_Fix">i</span> 
-            <span class="popupFixText" id="popupFixText">The fixation 
-              number sets the number of letters in a word that are bold,
-               1 is more letters or about 75% of the word shown in bold 
-               letters and 5 is less letters or about 25% of the word 
-               shown in bold letters.</span>
-          </div>
-
-          <label for="Saccade">Saccade #:</label>
-          <select name="Saccade" class="rectangle_Sac">
-            <option value="" disabled selected>Select</option>    
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-            <option value="50">50</option>
-          </select>
+         
           <div class="popup2" id="popup2">
             <span class="popup_Sac">i</span> 
             <span class="popupSacText" id="popupSacText">The Saccade, rapid movement
@@ -64,18 +54,25 @@
                points, 10 meaning every word, 20: every second word, 30: every third
                 word, 40: every fourth word , and 50: every fifth word.</span>
           </div>
-          
-          </div>
-        </div>
+          <label for="Saccade">Saccade:</label>
+          <select name="Saccade" class="rectangle_Sac">
+            <option value="" disabled selected>Select</option>    
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+          </select>
+         
         <div class="button">
           <button type="button" id="submitButton">Submit</button>
         </div>
-        
-       <div class="rectangle_Text" id="responseContainer">
-       <div id="URLtext"></div>
-       </div>
-       
+      </div>
+ 
       </form>
+      <div class="rectangle_Text" id="responseContainer">
+        <div id="URLtext"></div>
+        </div>
     </main>
     <footer class="footer" id="footer"></footer>
 
