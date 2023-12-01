@@ -13,11 +13,12 @@
     <main>
       <form id="readingForm">
         <div class="container">
-          <h2>Submit Your Reading Choice</h2>
+          <h2>Let's Begin!</h2>
+          <p>Enter the URL of the website that you want to speed read.</p>
         </div>
 
-        <div class="container" style="background-color: white">
-          <label for="URL">Input Your URL:</label>
+        <div class="URL" style="background-color: white">
+          <label for="URL">URL:</label>
           <input
             type="url"
             id="inputURL"
@@ -27,9 +28,9 @@
           />
          
          
-          <label for="Fixation">Choose Your Fixation Number:</label>
+          <label for="Fixation">Fixation #:</label>
           <select name="Fixation" class="rectangle_Fix">
-            <option value="" disabled selected>#</option>    
+            <option value="" disabled selected>Select</option>    
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -45,9 +46,9 @@
                shown in bold letters.</span>
           </div>
 
-          <label for="Saccade">Choose Your Saccade Number:</label>
+          <label for="Saccade">Saccade #:</label>
           <select name="Saccade" class="rectangle_Sac">
-            <option value="" disabled selected>#</option>    
+            <option value="" disabled selected>Select</option>    
             <option value="10">10</option>
             <option value="20">20</option>
             <option value="30">30</option>
@@ -66,7 +67,7 @@
           
           </div>
         </div>
-        <div class="container">
+        <div class="button">
           <button type="button" id="submitButton">Submit</button>
         </div>
         

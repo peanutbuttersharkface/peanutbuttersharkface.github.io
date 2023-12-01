@@ -19,6 +19,10 @@ body {
  font-size: var(--font-base);
  color: var(--primary-color);
 }
+main{
+    display:grid;
+    grid-template-rows: 10% 10% 10% 70%;
+}
 Header{
     display: flex;
     justify-content: space-between;
@@ -35,10 +39,11 @@ button{
     border:0;
     font-size: var(--font-base);
     cursor: pointer;
+    
 }
 .rectangle_URL{
     height:20px;
-    width: 200px;
+    width: 300px;
     background-color: var(--secondary-color);
 }
 .rectangle_Fix{
@@ -120,8 +125,10 @@ button{
 }
 
 .rectangle_Text{
-    height:300px;
-    width: 200px;
+    height:90%;
+    width: 95%;
+    margin: auto;
+    padding: 2% 3%;
     background-color: var(--secondary-color);
 }
 
