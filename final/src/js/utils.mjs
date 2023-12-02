@@ -1,33 +1,3 @@
-export function qs(selector, parent = document) {
-    return parent.querySelector(selector);
-}
-export function getLocalStorage(key) {
-    const localStorageData = localStorage.getItem(key);
-  
-    return localStorageData != null ? JSON.parse(localStorageData) : [];
-}
-export function setLocalStorage(key, data) {
-    const localStorageItems = getLocalStorage(key);
-  
-    const itemIndex = localStorageItems.findIndex((item) => item.product.Id === data.Id);
-  
-    if(itemIndex !== -1) {
-      localStorage.setItem(key, JSON.stringify(
-        localStorageItems.map((item, index) => index === itemIndex ? {
-          ...item,
-          quantity: item.quantity + 1
-        } : item)));
-    } else {
-      localStorage.setItem(key, JSON.stringify([
-        ...localStorageItems,
-        {
-          product: data,
-          quantity: 1
-        }
-      ]))
-    }
-  
-}
 export function renderWithTemplate(
   template,
   parentElement,

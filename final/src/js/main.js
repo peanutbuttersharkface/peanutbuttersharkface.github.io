@@ -24,7 +24,7 @@ export function togglePopupSacText(event){
 document.addEventListener("click", function(event) {
   var popup = document.getElementById("popup");
   var popup2 = document.getElementById("popup2");
-
+  
   var popupText = document.getElementById("popupFixText");
   var popupText2 = document.getElementById("popupSacText");
   
@@ -49,9 +49,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     console.error("Element wiht ID 'URLtext' not found.")
   }
   const submitButton = document.getElementById("submitButton");
-  // console.log("submitButton");
-  // const inputURL = document.getElementById("inputURL");
-  // console.log("inputURL", inputURL.value);
 
   document.getElementById("popup").addEventListener("click", togglePopupFixText);
   document.getElementById("popup2").addEventListener("click", togglePopupSacText);
@@ -64,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
   const fix = document.querySelector(".rectangle_Fix");
   const sac = document.querySelector(".rectangle_Sac");
-  
+
   submitButton.addEventListener("click", async function () {
    try { 
     const inputURLValue = inputURL.value;
