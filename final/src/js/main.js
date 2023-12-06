@@ -87,9 +87,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     event.preventDefault(); 
     form.style.display = "none";
   }
-
+  if (submitButton) {
   submitButton.addEventListener("click", onSubmit);
-   
+  }
+
   backButton.addEventListener("click", function(){
     responseContainer.style.display = "none";
     form.style.display = "block";
