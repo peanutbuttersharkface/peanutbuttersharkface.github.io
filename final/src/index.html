@@ -11,14 +11,41 @@
     <header class="header" id="header"></header>
 
     <main>
+      <div class="welcomePop" id="welcomePop">
+        <div class="pop-content">
+          <h2>Welcome to Speed O Reader!</h2>
+          <p>Speed O Reader was made to help anyone read quicker.  
+            How this works is you enter a URL for the website that has the 
+            information that you would like to read.  This will not work with
+            websites that require a login.
+          </p>
+          <p>Next you pick your Fixation point, this is a number 1-5.  The fixation
+            number sets the number of letters in a word that are bold.   For example,
+            if you were to number 1 about 75% of the word would be put in bold.  This is 
+            where your eye would focus on and be able to figure out the word just by Reading
+            what is in bold.   If you were to pick the number 5 than about 25% of the word
+            would be in bold.   Feel free to play around with this to see what is best for you.
+          </p>
+          <p>Lastly, you pick a Saccade number.  The numbers start at 10 and go up by 10's 
+            until 50.  Saccade is rapid movement of you eyes from two different points, this sets
+            the visual jumps from location to location by switching from different points of 
+            interest.   The numbers prepresent how many words should have fixation points, 10
+            meaning every word has a fixation point, 20 is every second word, 30 every third word 
+            and so on.  This can also be played around with until you find what works for you.
+          </p>
+          <p>Good luck on your journey to faster reading.</p>
+          <button id="closePopup">Close</button>
+        </div>
+      </div>
       <form id="readingForm">
+        
         <div class="formTitle">
           <h2>Let's Begin!</h2>
           <p>Enter the URL of the website that you want to speed read.</p>
         </div>
 
         <div class="inputs">
-          <label name="URL">URL:</label>
+          <label name="URL"></label>
           <input
             type="url"
             id="inputURL"
@@ -35,9 +62,9 @@
                letters and 5 is less letters or about 25% of the word 
                shown in bold letters.</span>
           </div>
-          <label name="Fixation">Fixation #:</label>
+          <label name="Fixation"></label>
           <select name="Fixation" class="rectangle_Fix">
-            <option value="" disabled selected>Select</option>    
+            <option value="" disabled selected>Fixation</option>    
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -47,16 +74,16 @@
          
           <div class="popup2" id="popup2">
             <span class="popup_Sac">i</span> 
-            <span class="popupSacText" id="popupSacText">The Saccade, rapid movement
+            <span class="popupSacText" id="popupSacText">Saccade, is the rapid movement
                of your eyes from two different points, this sets the visual jumps 
                from location to location by switching from different points of 
                interest. The numbers represent how many words should have fixation 
                points, 10 meaning every word, 20: every second word, 30: every third
                 word, 40: every fourth word , and 50: every fifth word.</span>
           </div>
-          <label name="Saccade">Saccade:</label>
+          <label name="Saccade"></label>
           <select name="Saccade" class="rectangle_Sac">
-            <option value="" disabled selected>Select</option>    
+            <option value="" disabled selected>Saccade</option>    
             <option value="10">10</option>
             <option value="20">20</option>
             <option value="30">30</option>
@@ -67,11 +94,19 @@
         <div class="button">
           <button type="button" id="submitButton">Submit</button>
         </div>
+        
       </div>
- 
+    </div>
+    <svg class="one" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#F29F05" fill-opacity="1" d="M0,288L48,288C96,288,192,288,288,250.7C384,213,480,139,576,117.3C672,96,768,128,864,154.7C960,181,1056,203,1152,197.3C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+    
       </form>
       <div class="rectangle_Text" id="responseContainer">
         <div id="URLtext"></div>
+        </div>
+        <div id="backButtonDiv">
+          <button type="button" id="backButton" style="display: none ;">Back</button>
         </div>
     </main>
     <footer class="footer" id="footer"></footer>

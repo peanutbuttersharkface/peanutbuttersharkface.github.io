@@ -4,17 +4,14 @@ import { fetchData, displayText} from "./api.mjs";
 
 export function togglePopupFixText(event) {
   event.stopPropagation();
-
   var popupText = document.getElementById("popupFixText");
   if(popupText){
-    popupText.classList.toggle("show");
-    
+    popupText.classList.toggle("show"); 
   }
 }
 
 export function togglePopupSacText(event){
   event.stopPropagation();
-
   var popupText2 = document.getElementById("popupSacText");
   if(popupText2){
     popupText2.classList.toggle("show2");
@@ -24,7 +21,6 @@ export function togglePopupSacText(event){
 document.addEventListener("click", function(event) {
   var popup = document.getElementById("popup");
   var popup2 = document.getElementById("popup2");
-  
   var popupText = document.getElementById("popupFixText");
   var popupText2 = document.getElementById("popupSacText");
   
@@ -42,41 +38,68 @@ document.addEventListener("click", function(event) {
 document.addEventListener("DOMContentLoaded", async function () {
   console.log("DOM Loaded")
   await loadHeaderFooter();
+
+  /* Welcome Popup */
+  const popupShow = localStorage.getItem("popupShow");
+  if (!popupShow){
+    const pop = document.getElementById("welcomePop");
+    pop.style.display = "block";
+    document.getElementById("closePopup").addEventListener("click", function() {
+      pop.style.display = "none";
+      localStorage.setItem("popupShow", "true");
+    });
+  }
+  /* Text from the URL */
   const URLtextElement = document.getElementById("URLtext");
   if (URLtextElement){
     URLtextElement.style.display = "block";
   } else {
     console.error("Element wiht ID 'URLtext' not found.")
   }
-  const submitButton = document.getElementById("submitButton");
 
   document.getElementById("popup").addEventListener("click", togglePopupFixText);
   document.getElementById("popup2").addEventListener("click", togglePopupSacText);
 
-  const formSubmitted = sessionStorage.getItem("formSubmitted");
+  const form = document.getElementById("readingForm");
+  const backButton = document.getElementById("backButton");
+  const submitButton = document.getElementById("submitButton");
+  const responseContainer = document.getElementById("responseContainer");
 
-  if (formSubmitted) {
-    document.getElementById("URLtext").style.display = "block";
-    sessionStorage.removeItem("formSubmitted");
+  if (backButton) {
+   backButton.style.display = "none";
   }
   const fix = document.querySelector(".rectangle_Fix");
   const sac = document.querySelector(".rectangle_Sac");
-
-  submitButton.addEventListener("click", async function () {
-   try { 
-    const inputURLValue = inputURL.value;
-    const fixationValue = fix.value;
-    const saccadeValue = sac.value;
-    const data = await fetchData(inputURLValue, fixationValue, saccadeValue);
-    displayText(data);
-   } catch (error){
+ 
+  async function onSubmit(event){
+    try { 
+      const inputURLValue = inputURL.value;
+      const fixationValue = fix.value;
+      const saccadeValue = sac.value;
+      const data = await fetchData(inputURLValue, fixationValue, saccadeValue);
+      displayText(data);
+      backButton.style.display = "block";
+      URLtextElement.style.display = "block";
+      responseContainer.style.display = "block";
+    } catch (error){
       console.error("Error occurred:", error);
     }
-  });
+    event.preventDefault(); 
+    form.style.display = "none";
+  }
 
+  submitButton.addEventListener("click", onSubmit);
+   
+  backButton.addEventListener("click", function(){
+    responseContainer.style.display = "none";
+    form.style.display = "block";
 
-  window.addEventListener("beforeunload", function () {
-    sessionStorage.removeItem("formSubmitted");
-  });
-});  
-
+    inputURL.value = "";
+    fix.value = "";
+    sac.value = "";
+    backButton.style.display = "none";
+  }); 
+window.addEventListener("beforeunload", function () {
+  sessionStorage.removeItem("formSubmitted");
+});
+});

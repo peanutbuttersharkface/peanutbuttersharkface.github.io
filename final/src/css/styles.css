@@ -22,8 +22,9 @@ body {
 
 }
 main{
-    display:grid;
-    grid-template-rows: 1fr auto;
+    display: flex;
+   flex-direction: column;
+    align-items: center;
     padding-left: 10px;
     padding-right: 10px;
     
@@ -31,36 +32,69 @@ main{
 Header{
     display: flex;
     justify-content: space-between;
-    padding: 0 10px;
-    background-color:var(--primary-color);
-    color:white;
-    font-weight: bolder;
-    border-style: double;
-    border-color: white;
-    border-width: 10px;
-    justify-content: center;
-    font-style: var(--font-headline);
+    padding: 0 10px; 
 }
-form{
-    grid-row: 1/2;
+
+.logo img{
+    height:auto;
+    width:30%;
+}
+
+.welcomePop{
+    display: none;
+    position: fixed;
+    left:10%;
+    width: 80%;
+    height: 80%;
+    background: white;
+    color:var(--primary-color);
+    padding:20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    height: 70%;
+    border-style: ridge;
+    border-color: #103740;
+    border-width: 2%;
+   
+   
+}
+.pop-content{
+    text-align: center;
+}
+form {
+    grid-row: 1/4;
     display:grid;
-    margin-bottom: 20px;
-    /* grid-template-rows: .25fr .25fr .25fr .25fr;  */
+    grid-template-columns: 100%;
+    grid-template-rows: .5fr 1fr ;
+    background-color: var(--primary-color);
+    color: white;
+    justify-content: center;
+    /* align-items: flex-start; */
     
+}
+form h2 {
+    font-weight: bolder;
     
+}
+form p {
+    color:#F2D0A7;
+   
 }
 
 .formTitle{
-    color:var(--primary-color);
+    color: white;
+    padding-left: 20px;
+}
+.inputs{
+    display: grid;
+    grid-template-columns: 30%  10% 30%  30%;
+    grid-template-rows: 1fr  1fr 1fr 1fr;
     padding-left: 10px;
 }
-/* .inputs{
-    background-color: var(--primary-color);
-} */
 button{
     grid-row:3/4;
     padding: .5em 2em;
-    background-color: var(--dark-yellow);
+    background-color: var(--medium-yellow);
     color: var(--primary-color);
     margin: auto;
     display:block;
@@ -68,34 +102,52 @@ button{
     border:0;
     font-size: var(--font-base);
     cursor: pointer;
-    
+}
+#backButton::before{
+    content: none;
+}
+.button{
+    grid-row: 4/5;
+    grid-column: 1/5;
 }
 .rectangle_URL{
     display: grid;
-    grid-row:2/3;
     margin:2px;
+    padding-left: 10px;
     margin-left: 10px;
-    height:20px;
-    width: 300px;
+    height:30px;
+    width: 100%;
+    border-radius: 7px;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    color:lightslategray;
    
 }
 .rectangle_Fix{
     display: grid;
-    grid-row: 3/4;
-    margin:2px;
+    grid-column: 1/2;
+    grid-row:2/3;
+    margin:6px;
     margin-left: 10px;
-    height:20px;
-    width: 100px;
+    height:30px;
+    width: 90%;
+    border-radius: 7px;
+    color:lightslategray;
+    padding-left: 10px;   
     
 }
+
+
 /* Popup container */
 .popup {
-    position: relative;
-    display: inline-block;    
+    grid-column: 2/3; 
+    grid-row: 2/3; 
+    margin-top: 10px; 
 }
 .popup2 {
-    position: relative;
-    display: inline-block;   
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-top: 10px; 
 }  
 .popup_Fix{
     grid-row:2/3;
@@ -104,21 +156,21 @@ button{
     height: 20px;
     text-align: center;
     border-radius: 50%;
-    background-color: var(--dark-yellow);
+    background-color: var(--medium-yellow);
     color: #fff;
     cursor: pointer;
 }
 .popup .popupFixText {
     display: none;
     width: 200px;
-    background-color: var(--primary-color);
+    background-color: var(--medium-yellow);
     color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 8px;
     position: absolute;
     z-index: 1;
-    top: -30px;
+    top: 10px;
     left: 50%;
     transform:translateX(-50%)
 }
@@ -129,21 +181,21 @@ button{
     height: 20px;
     text-align: center;
     border-radius: 50%;
-    background-color: var(--dark-yellow);
+    background-color: var(--medium-yellow);
     color: #fff;
     cursor: pointer;
 }
 .popup2 .popupSacText {
     display: none;
     width: 200px;
-    background-color: var(--primary-color);
+    background-color: var(--medium-yellow);
     color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 8px;
     position: absolute;
     z-index: 1;
-    top: -30px;
+    top: 10px;
     left: 50%;
     transform:translateX(-50%)
 }  
@@ -157,10 +209,22 @@ button{
 .rectangle_Sac{
     display: grid;
     grid-row: 3/4;
-    margin:2px;
+    grid-column: 1/2;
+    margin:5px;
     margin-left: 10px;
-    height:20px;
-    width: 100px;
+    height:30px;
+    width: 90%;
+    border-radius: 7px;
+    color:lightslategray;
+    padding-left: 10px;
+}
+svg {
+    grid-row: 4;
+    grid-column: 1;
+    align-self: end;
+    margin-top: auto;
+    width: 100%;
+  
 }
 
 .rectangle_Text{
@@ -174,4 +238,36 @@ button{
     font-weight: bold;
     padding-left: 10px;
     margin-top: 50px;
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 500px) {
+form {
+    width: 600px;
+}
+.rectangle_URL{
+    width: 300px; 
+}
+.rectangle_Fix{
+    width: 100px;       
+}
+.rectangle_Sac{
+    width: 100px;
+}
+.inputs{
+    display: grid;
+    grid-template-columns: 20%  20% 30%  30%;
+    grid-template-rows: 1fr  1fr 1fr 1fr;
+    padding-left: 10px;
+}
+.popup {
+    grid-column: 2/3; 
+    grid-row: 2/3; 
+    margin-top: 10px; 
+}
+.popup2 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-top: 10px; 
+} 
 }
