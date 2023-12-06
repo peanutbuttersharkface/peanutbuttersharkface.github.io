@@ -2,7 +2,7 @@
   "name": "final",
   "version": "1.0.0",
   "description": "Speed O Reader",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "vite",
     "build": "vite build --emptyOutDir",
@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/peanutbuttersharkface/peanutbuttersharkface.github.io/issues"
   },
-  "homepage": "https://github.com/peanutbuttersharkface/peanutbuttersharkface.github.io#readme",
+  "homepage": "https://github.com/peanutbuttersharkface/peanutbuttersharkface.github.io/final/src/index.html",
   "dependencies": {
     "dotenv": "^16.3.1"
   }
