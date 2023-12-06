@@ -64,7 +64,8 @@ document.addEventListener("DOMContentLoaded", async function () {
   const backButton = document.getElementById("backButton");
   const submitButton = document.getElementById("submitButton");
   const responseContainer = document.getElementById("responseContainer");
-
+  const inputURL = document.getElementById("inputURL");
+  
   if (backButton) {
    backButton.style.display = "none";
   }
