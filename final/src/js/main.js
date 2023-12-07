@@ -91,9 +91,9 @@ document.addEventListener("DOMContentLoaded", async function () {
   if (submitButton) {
   submitButton.addEventListener("click", onSubmit);
   }
-
-  backButton.addEventListener("click", async function(){
-    await loadHeaderFooter();
+ 
+  backButton.addEventListener("click", function(){
+    window.location.href = "https://peanutbuttersharkface.github.io/final/src/index.html";
     responseContainer.style.display = "none";
     form.style.display = "block";
     inputURL.value = "";
