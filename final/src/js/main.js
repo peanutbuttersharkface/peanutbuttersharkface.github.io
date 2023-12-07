@@ -92,8 +92,9 @@ document.addEventListener("DOMContentLoaded", async function () {
   submitButton.addEventListener("click", onSubmit);
   }
 
-  backButton.addEventListener("click", function(){
+  backButton.addEventListener("click", async function(){
     responseContainer.style.display = "none";
+    
     form.style.display = "block";
     inputURL.value = "";
     fix.value = "";

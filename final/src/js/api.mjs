@@ -1,5 +1,5 @@
 export async function fetchData(inputURL, fix, sac){
-  //const fetch = require('node-fetch');
+
 
   const encodedParams = new URLSearchParams();
   encodedParams.set('content', inputURL);
