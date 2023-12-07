@@ -93,8 +93,8 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 
   backButton.addEventListener("click", async function(){
+    await loadHeaderFooter();
     responseContainer.style.display = "none";
-    
     form.style.display = "block";
     inputURL.value = "";
     fix.value = "";
