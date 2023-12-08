@@ -233,7 +233,35 @@ svg {
     width: 95%;
     padding: 10px;  
 } 
+.threeURLs {
+    font: var(--font-body);
+    color:#103740;
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin:10px;
+    max-width: 300px;
+    
 
+}
+ul.threeURLs {
+    list-style-type: circle ;
+    padding: 0;
+    
+}
+
+ul.threeURLs li {
+    margin-bottom: 8px;
+    
+}
+
+ul.threeURLs li a {
+    text-decoration: none;
+    color:#103740;
+}
+.urlTitle h2{
+    text-decoration: underline;
+}
 .footer{
     font-weight: bold;
     padding-left: 10px;

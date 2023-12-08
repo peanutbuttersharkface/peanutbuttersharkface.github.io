@@ -1,12 +1,14 @@
-export async function fetchData(inputURL, fix, sac){
-
-
+export async function fetchData(inputURL, fix, sac) {
   const encodedParams = new URLSearchParams();
   encodedParams.set('content', inputURL);
   encodedParams.set('response_type', 'html');
   encodedParams.set('request_type', 'html');
   encodedParams.set('fixation', fix);
   encodedParams.set('saccade', sac);
+
+  const encodedParamsJSON = JSON.stringify(Object.fromEntries(encodedParams));
+  console.log('Encoded Params (JSON):', encodedParamsJSON);
+
 
   const apiURL = 'https://bionic-reading1.p.rapidapi.com/convert';
   const options = {
@@ -27,24 +29,25 @@ export async function fetchData(inputURL, fix, sac){
     throw error;
   }
 }
-export function displayText(responseText){
-  const responseContainer = document.getElementById("responseContainer");
-  if (responseContainer) {
-     const tempElement = document.createElement("div");
-     tempElement.innerHTML = responseText;
-     const textContent = tempElement.textContent;
 
-     const computedStyles = getComputedStyle(responseContainer);
+
+export function displayText(responseData, container){
+  if (container) {
+
+     const tempElement = document.createElement("div");
+     tempElement.innerHTML = responseData;
+
+     const computedStyles = getComputedStyle(container);
      Object.assign(tempElement.style, {
       fontFamily: computedStyles.fontFamily,
       fontSize: computedStyles.fontSize,
      });
 
-     responseContainer.innerHTML = "";
-     responseContainer.appendChild(tempElement);
-  }  else {
-     console.error('Response container not fount');
-  }
+     container.innerHTML = "";
+     container.appendChild(tempElement);
+  }  
 }
 
-fetchData();
+fetchData().then(displayText).catch(error => console.error(error));
+
+
