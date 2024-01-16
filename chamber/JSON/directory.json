@@ -1,0 +1,76 @@
+{
+    "directory": [
+        {
+            "name": "Ridley's Family Markets",
+            "address": "1401 E 6th St.",
+            "phonenumber": "(208) 549-0172",
+            "website":"https://shopridleys.com/home.php" ,
+            "logo": "images/Ridleylogo.png" ,
+            "membershipLevel": "Gold"
+        },
+        {
+            "name": "People's Furniture",
+            "address": "525 State St.",
+            "phonenumber": "(208) 549-2246",
+            "website":"https://www.shoppeoples.com/",
+            "logo": "images/peopleslogo.png",
+            "membershipLevel":"Gold"
+        },
+        {
+            "name": "Idaho Pizza Company",
+            "address": "17 W Commercial St.",
+            "phonenumber": "(208) 549-8765",
+            "website":"https://www.idahopizzacompany.com/",
+            "logo": "images/idahopizzaco.png",
+            "membershipLevel":"Silver"
+        },
+        {
+            "name": "Napa Auto Parts",
+            "address": "541 State St.",
+            "phonenumber": "(208) 549-2811",
+            "website":"https://www.napaonline.com/",
+            "logo": "images/NAPA.png",
+            "membershipLevel":"Bronze"
+        },
+        {
+            "name": "Ace Hardware",
+            "address": "1401 E 6th St.",
+            "phonenumber": "(208) 549-1332",
+            "website":"https://www.acehardware.com/",
+            "logo": "images/Acelogo.png",
+            "membershipLevel":"Bronze"
+        },
+        {
+            "name": "The Cottages",
+            "address": "1225 6th St.",
+            "phonenumber": "(208) 414-4200",
+            "website":"https://www.assistedlivingidaho.com/portfolio/weiser-location/",
+            "logo": "images/cottageslogo.png",
+            "membershipLevel":"Non-Profit"
+        },
+        {
+            "name": "Maverik",
+            "address": "703 E. Main St.",
+            "phonenumber": "(800) 789-4455",
+            "website":"https://www.maverik.com/",
+            "logo": "images/maveriklogo.png",
+            "membershipLevel":"Silver"
+        },
+        {
+            "name": "Flower Basket",
+            "address": "308 State St.",
+            "phonenumber": "(208) 414-2151",
+            "website":"https://theflowerbasketllc.com/",
+            "logo": "images/flowerbasket.png",
+            "membershipLevel":"Bronze"
+        },
+        {
+            "name": "AmeriTitle",
+            "address": "128 E. Main St.",
+            "phonenumber": "(208) 414-1792",
+            "website":"https://www.amerititle.com/",
+            "logo": "images/amerititle.png",
+            "membershipLevel":"Gold"
+        }
+    ]
+}

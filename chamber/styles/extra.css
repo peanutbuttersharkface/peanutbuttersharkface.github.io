@@ -1,0 +1,170 @@
+
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+header {
+	background-color:white;
+    color:rgb(41, 75, 117);
+	padding: 5px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 800px;
+	margin: 0 auto;
+	
+}
+.logo img {
+	width: 150px;
+	height: auto;
+}
+
+.social {
+	margin-right: 1.5rem;
+}
+
+.social svg {
+	width: 25px;
+	height: auto;
+    border-radius: 5px;
+}
+h1, p {margin: 0 2vw;}
+nav button{
+	margin:.2rem svw;
+	background-color:transparent;
+	border:none;
+	font-size: 2rem;
+	color:rgb(161, 161, 161);
+}
+nav{
+	background-color: #eee;
+}
+nav ul{
+	list-style-type: none;
+	padding:0;
+	margin:0;
+}
+nav ul li a{
+	display: block;
+	padding: .8rem 2vw;
+	text-decoration: none;
+	color:#333;
+	border-top: 1px solid rgba(0,0,0,0.5);
+}
+nav ul li.active a {
+    background-color: rgba(0,0,0,0.2);
+    color:#fff;
+ }
+nav ul li a:hover{
+    background-color: rgba(0,0,0,0.3);
+
+}
+nav ul {
+    display:none;
+}
+nav ul.open {display: block;}
+
+ 
+aside {
+    color:rgb(41, 75, 117); 
+    text-align: center;
+	box-shadow: 0 0 30px rgb(161, 161, 161);
+    
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	margin-left: 1rem;
+}
+
+
+h1 {
+	font-size: 50px;
+    font-family: 'Nunito', sans-serif;
+}
+h2 {
+    display: flex;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+main section {
+	margin: 0.5rem;
+	border: 1px solid #bbb;
+	background-color: rgb(231, 231, 229);
+    border-radius: 25px;
+    padding: 20px;
+	max-width: 800px;
+	
+
+     
+}
+  footer{
+	text-align: center;
+	color:rgb(41, 75, 117);
+	background-color:white;
+	margin: 0 auto;
+	
+	font-family: 'Nunito', sans-serif;
+	font-size: 12px;
+	border: 1px solid #bbb;
+    border-radius: 10px;
+    max-width: 900px;
+    align-items: center;
+}
+.mini img {
+    width:90px;
+    height: auto;
+
+}
+
+article img[data-src] {
+    filter: blur(0.2em);
+  }
+  
+  article img {
+    filter: blur(0em);
+    transition: filter 0.5s;
+  }
+  
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 50px;
+  }
+  
+ 
+
+  .one {
+    padding: 4px;
+  }
+  .two {
+    padding: 4px;
+  }
+  .three {
+    padding: 4px;
+  }
+  .four {
+    padding: 4px;
+  }
+  .five {
+    padding: 4px;
+  }
+ .credit {
+	font-size:10px;
+ }
+ .demographic{
+	display:grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+ }

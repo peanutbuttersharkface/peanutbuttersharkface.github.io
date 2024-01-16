@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        
+<meta charset="UTF-8">
+<meta name="description" content="Chamber of Commerce">
+<meta name="author" content="Alicia Thompson">
+
+<title>HTML Start Site by Alicia Thompson</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1">
+
+
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/medium.css"> 
+<link rel="stylesheet" href="styles/large.css">
+    
+
+
+</head>
+<body>
+    <header>
+          <div class="container">
+            <div class ="logo">
+                <picture>
+                    <img src="images/ChamberLogo2.png" alt=" Logo">
+                </picture>
+            </div>
+            
+            
+                <nav>
+                    
+                 
+                    <ul class="navigation">
+                        <li><a id="menu" href= "#"></a></li>
+                        <li><a href="index.html">Home</a></li>    
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="directory.html">  Directory</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav> 
+                    <div class="face">
+                    <img  class="face" src="images/facebookicon.png" alt="facebook">
+                </div>
+                <div class="link">
+                    <img  class="link" src="images/LinkedinIcon.png" alt="linkedIn">
+                </div>     
+                    
+                    <p id="date" class="date"></p> 
+                    <div id="ann" class="none">
+                        <h5>
+                            🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.
+                        </h5>
+                    </div>
+
+                            
+</div>
+
+          
+</header>         
+        
+    <main>
+        <div class="home">
+            <section class="Hero">
+                <div class="clearfix">
+            <picture class="meeting">
+                <source media="(max-width: 200px)" srcset="images/idahomountains200.jpg" >
+                <source media="(max-width: 500px)" srcset="images/idahomountains200.jpg">
+                <img  src="images/idahomountains1100.jpg" alt="meeting">
+            </picture>
+                <h2 class="small">Welcome to Weiser!</h2>
+                
+                <button class="btn" href="join.html">Start Membership</button> 
+            
+        </div>
+            </section>
+            <section class="Event">
+                <h3>
+                    Events
+                </h3>
+                <h4>Don't miss the 15th Annual City Pancake Breakfast!</h4>
+                <p>Sponsored by Weiser Chamber of Commerce</p>
+                <p>Questions Please Contact Our Office</p>
+                
+                
+            </section>
+            <section class="Weather">
+                <h2>Weather </h2>
+                <h1><strong><span id="current-temp"></span></strong> &deg;F</h1>
+                <figure>
+                <img src="" alt="weather-icon" id="weather-icon">
+                <figcaption></figcaption>
+            </figure>
+                 
+                <p>Wind Speed:  <span id="wind-speed"></span>km/h</p>
+                <p>Wind Chill:  <span id="wind-chill"></span></p>
+            </section>
+            
+            <section class="Join">
+                <button class="joinbtn">JOIN</button> 
+                <br>
+                
+                <p>Click the button to see what great benefits there are to being a part of the Chamber of Commerce!</p>
+            </section>
+            <section class="News">
+                <h2>
+                    News Release
+                </h2>
+                <p>Sam Man is WANTED for stealing a ham from the Piggly Wiggly on January 31.
+                    If you know of his whereabouts please contact the local police.  If he still 
+                    has the ham you can keep it as your reward!
+                </p>
+            </section>
+            <section class="Spotlight">
+                
+                
+                <div class="spot1">
+                   
+                <h3 >
+                    Heart Bakery
+
+                </h3>
+                <img src="images/donut.png" alt="donut">
+                <p>Donuts Fresh Daily!<br>
+                    Open 6am-4pm Mon-Sat.
+                </p>
+                <h4>orders@heartbakery.com</h4>
+                <h4>(208) 549-1000</h4>
+            
+            </div>
+                <div class="spot2">
+                    
+                    <h3>Fancy Pants Gym</h3>
+                    <img src="images/exercise.jpg" alt="man">
+               
+                <p>Be a good human workout!</p>
+                <h4>membership@gym.net</h4>
+                <h4>1-800-workout</h4>
+            
+            </div>
+                <div class="spot3">
+                    
+                <h3>
+                    Nathan's Storage
+   
+                </h3>
+                <img src="images/storage.png" alt="storage">
+                <p>You buy it, we store it!</p>
+                <h4>rental@storage.org</h4>
+                <h4>(208) 555-1122</h4>
+            
+            </div>
+           
+            </section>
+            </div>
+            
+    </main>
+    <footer>
+    <div class = "mini">
+    <picture>
+            <img src="images/ChamberLogoPlain2.png" alt=" Logo">
+    </picture>
+    </div>
+    <div class="address">
+    <h2>Weiser Chamber of Commerce</h2>
+    <p>10 State St.</p>
+    <p>Weiser, Idaho 83672</p>
+    </div>
+    <div class="info">
+    <p>chamber@weiserid.org</p>
+    <p>+(208) 555-1234</p>
+    <div class="location">
+        <img src="images/location.png" alt="loction">
+    
+    <p>
+    Location Map</p></div>
+    </div>
+    <div class="low">
+        <div class="year">
+        <p>
+            @ 
+            <span id="currentYear"></span>
+            Weiser Chamber
+        </p>
+        </div>
+        <div class="name">
+            <h3>Alicia Thompson</h3>
+        </div>
+        <div class="project">
+            <p>WDD 230 Project</p>
+        </div>
+        <div class="mod">
+            <p>Last Modification:
+                <span id="lastUpdted"></span>
+            </p>
+        </div>
+            <div class="credit">
+             <a href="https://www.flaticon.com/free-icons/pin" title="pin icons">Pin icons created by Freepik - Flaticon</a><br>
+             <a href="https://openweathermap.org/">openweathermap.org</a>
+            </div>
+            </div>   
+    </footer>
+<script src="scripts/script.js"></script> 
+<script src="scripts/weather-api.js"></script>  
+</body>
+</html>

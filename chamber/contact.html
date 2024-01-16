@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        
+<meta charset="UTF-8">
+<meta name="description" content="Chamber of Commerce-Directory">
+<meta name="author" content="Alicia Thompson">
+
+<title>HTML Start Site by Alicia Thompson</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1">
+
+
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/medium.css"> 
+<link rel="stylesheet" href="styles/large.css">
+    
+
+
+</head>
+<body>
+    <header>
+          <div class="container">
+            <div class ="logo" onclick="window.location.href='index.html'">
+                <picture>
+                    <img src="images/ChamberLogo2.png" alt=" Logo">
+                </picture>
+            </div>
+            
+            
+                <nav>
+                    
+                 
+                    <ul class="navigation">
+                        <li><a id="menu" href= "#"></a></li>
+                        <li><a href="index.html">Home</a></li>    
+                        <li><a href="discover.html">Discover</a></li>
+                        <li><a href="directory.html">  Directory</a></li>
+                        <li><a href="join.html">Join</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav> 
+                    <div class="face">
+                    <img  class="face" src="images/facebookicon.png" alt="facebook">
+                </div>
+                <div class="link">
+                    <img  class="link" src="images/LinkedinIcon.png" alt="linkedIn">
+                </div>     
+                    
+                    <p id="date" class="date"></p> 
+
+                            
+</div>
+
+          
+</header>
+<main>
+    <div class="mainForm">
+    <h1 class="formTitle">Contact Chamber of Commerce</h1>
+    <h3 class="formSubTitle">Please fill in the information in this form and we will get back to you promptly.</h3>
+      <form method="get" action="thankyou.html">
+        
+        <fieldset>
+            <legend>Information</legend>
+              
+                <Label class="top">First Name* <input type="text" name="fname" required></Label>
+                <Label class="top">Last Name* <input type="text" name="lname" required></Label>
+                <Label class="top">Cell Phone <input type="tel" name="phone" placeholder="1235551234"></Label>
+                <Label class="top">Email* <input type="email" name="email" placeholder="youremail@gmail.com" required></Label>
+                <Label class="top">Website <input type="url" name="url" placeholder="http://"></Label>
+
+        </fieldset>
+
+       
+        <fieldset>
+            <legend>Comments/Questions</legend>
+                <label><textarea class="top"  name="about" cols="60" rows="5" ></textarea> </label>
+
+        </fieldset>
+        
+        <input type="submit" value="SUBMIT FORM" class="submitBtn">
+      
+            <div class="ContactInfo">
+               <h1>Weiser Chamber of Commerce</h1> 
+                <h2>10 State St.</h2>
+                <h2>Weiser, Idaho 83672</h2>
+                
+                <h2>chamber@weiserid.org</h2>
+                <h2>+(208) 555-1234</h2><br>
+            </div>
+                  
+       
+      </form>  
+    </div>
+      <input type="hidden" name="datefill" id="lastUpdated2">    
+    
+  
+    </main>
+<footer>
+    <div class = "mini">
+    <picture>
+            <img src="images/ChamberLogoPlain2.png" alt=" Logo">
+    </picture>
+    </div>
+    <div class="address">
+    <h2>Weiser Chamber of Commerce</h2>
+    <p>10 State St.</p>
+    <p>Weiser, Idaho 83672</p>
+    </div>
+    <div class="info">
+    <p>chamber@weiserid.org</p>
+    <p>+(208) 555-1234</p>
+    <div class="location">
+        <img src="images/location.png" alt="loction">
+    
+    <p>
+    Location Map</p></div>
+    </div>
+    <div class="low">
+        <div class="year">
+        <p>&copy; <span id="currentYear"></span>
+             Weiser Chamber</p> </div>
+             <div class="name">
+             <h3> Alicia Thompson </h3>
+            </div>
+            <div class="project">
+             <p> WDD 230 Project </p> 
+            </div>
+            <div class="mod">
+                <p>Last Modification: <span id="lastUpdated"></span></p> 
+            </div>
+            <div class="credit">
+             <a href="https://www.flaticon.com/free-icons/pin" title="pin icons">Pin icons created by Freepik - Flaticon</a>
+            </div>
+            </div>   
+    </footer>
+<script src="scripts/script.js"></script>   
+<script src="scripts/directory.js"></script> 
+</body>
+</html>
