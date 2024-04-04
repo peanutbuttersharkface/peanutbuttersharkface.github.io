@@ -9,7 +9,7 @@ export async function fetchData(inputURL, fix, sac) {
   const encodedParamsJSON = JSON.stringify(Object.fromEntries(encodedParams));
   console.log('Encoded Params (JSON):', encodedParamsJSON);
 
-
+ 
   const apiURL = 'https://bionic-reading1.p.rapidapi.com/convert';
   const options = {
     method: 'POST',

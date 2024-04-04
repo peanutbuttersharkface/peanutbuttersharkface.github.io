@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
   const fix = document.querySelector(".rectangle_Fix");
   const sac = document.querySelector(".rectangle_Sac");
-  // let isFormVisible = true;
+  
   const isFormVisible = document.getElementById("lastUsedURLsList");
   const urlTitle = document.getElementById("lastUsedURLsListTitle");
   console.log("form is visible:", isFormVisible);

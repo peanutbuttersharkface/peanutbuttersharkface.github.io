@@ -1,7 +1,8 @@
+const d = new Date();
+
 const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-const d = new Date();
 let month = months[d.getMonth()];
 let day = days[d.getDay()];
 let years = d.getFullYear();
@@ -16,7 +17,7 @@ const lastModified = document.lastModified
 document.querySelector("#currentYear").textContent = year
 document.querySelector("#lastUpdated").textContent = lastModified
 
-const mainnav = document.querySelector('.navigation')
+const mainnav = document.querySelector('/navigation')
 const hambutton = document.querySelector('#menu');
 
 

@@ -10,12 +10,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1">
 
-
-<link rel="stylesheet" href="styles/base.css">
-<link rel="stylesheet" href="styles/medium.css"> 
-<link rel="stylesheet" href="styles/large.css">
-<script src="scripts/script.js"></script> 
-<script src="scripts/weather-api.js"></script> 
+<link rel="stylesheet" href="src/styles/sand.css">
+<link rel="stylesheet" href="src/styles/extra.css">
+<link rel="stylesheet" href="src/styles/base.css">
+<link rel="stylesheet" href="src/styles/medium.css"> 
+<link rel="stylesheet" href="src/styles/large.css">
+<script type="module" src="/src/scripts/main.js"></script>
 
 
 </head>
@@ -29,12 +29,11 @@
             <picture class="meeting">
                 <source media="(max-width: 200px)" srcset="images/idahomountains200.jpg" >
                 <source media="(max-width: 500px)" srcset="images/idahomountains200.jpg">
-                <img  src="images/idahomountains1100.jpg" alt="meeting">
+                <img  src="./src/images/idahomountains1100.jpg" alt="meeting">
             </picture>
                 <h2 class="small">Welcome to Weiser!</h2>
-                <a action="HTML/join.html">
                 <button class="btn">Start Membership</button> 
-                </a>    
+                   
         </div>
             </section>
             <section class="Event">
@@ -47,7 +46,7 @@
                 
                 
             </section>
-            <section class="Weather">
+            <section class="Weather" id="weatherContainer">
                 <h2>Weather </h2>
                 <h1><strong><span id="current-temp"></span></strong> &deg;F</h1>
                 <figure>
@@ -60,7 +59,7 @@
             </section>
             
             <section class="Join">
-                <button class="joinbtn" <a></a>>JOIN</button> 
+                <button class="joinbtn">JOIN</button> 
                 <br>
                 
                 <p>Click the button to see what great benefits there are to being a part of the Chamber of Commerce!</p>
@@ -83,7 +82,7 @@
                     Heart Bakery
 
                 </h3>
-                <img src="images/donut.png" alt="donut">
+                <img src="/src/images/donut.png" alt="donut">
                 <p>Donuts Fresh Daily!<br>
                     Open 6am-4pm Mon-Sat.
                 </p>
@@ -94,7 +93,7 @@
                 <div class="spot2">
                     
                     <h3>Fancy Pants Gym</h3>
-                    <img src="images/exercise.jpg" alt="man">
+                    <img src="/src/images/exercise.jpg" alt="man">
                
                 <p>Be a good human workout!</p>
                 <h4>membership@gym.net</h4>
@@ -107,7 +106,7 @@
                     Nathan's Storage
    
                 </h3>
-                <img src="images/storage.png" alt="storage">
+                <img src="/src/images/storage.png" alt="storage">
                 <p>You buy it, we store it!</p>
                 <h4>rental@storage.org</h4>
                 <h4>(208) 555-1122</h4>

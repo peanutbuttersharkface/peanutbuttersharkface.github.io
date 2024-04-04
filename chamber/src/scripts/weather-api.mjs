@@ -11,7 +11,7 @@ const zip = 83672
 const url =`https://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=9b60de9cb85d53b6b4102f19c69a8921&units=imperial`
 
 
-async function apiFetch(){
+export async function apiFetch(){
     
   try{
     const response = await fetch(url);
@@ -28,7 +28,8 @@ async function apiFetch(){
     console.log(error);
   }
 } 
-function displayResults(weatherData){
+export function displayResults(weatherData){
+ 
   const temp = currentTemp.innerHTML = `${weatherData.main.temp.toFixed(0)}`;
   
   
@@ -50,6 +51,6 @@ function displayResults(weatherData){
       windChill.textContent = ("N/A");
     }
 }
-apiFetch();
+//apiFetch().then(displayResults).catch(error => console.error(error));
 
 // 

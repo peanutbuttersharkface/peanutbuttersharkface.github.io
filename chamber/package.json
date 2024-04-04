@@ -2,10 +2,10 @@
   "name": "chamber",
   "version": "1.0.0",
   "description": "chamber of commerce website",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "vite",
-    "build": "vite build --emptyOutDir",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint *.js src/**/*.js",
     "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",    
@@ -24,10 +24,23 @@
     "prettier": "^3.2.4",
     "vite": "^5.0.12"
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "last 3 and_chr versions",
+    "last 3 chrome versions",
+    "last 3 opera versions",
+    "last 3 ios_saf versions",
+    "last 3 safari versions"
+  ],
   "bugs": {
     "url": "https://github.com/peanutbuttersharkface/peanutbuttersharkface.github.io/issues"
   },
-  "homepage": "https://github.com/peanutbuttersharkface/peanutbuttersharkface.github.io/chamber/index.html",
+  "homepage": "https://github.com/peanutbuttersharkface/peanutbuttersharkface.github.io/chamber",
   "dependencies": {
     "dotenv": "^16.3.2"
   
